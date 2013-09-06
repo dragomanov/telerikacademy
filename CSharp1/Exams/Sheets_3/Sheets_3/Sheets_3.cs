@@ -1,0 +1,10 @@
+﻿using System;
+
+class Sheets_3
+{
+    static void Main()
+    {
+        String binary = Convert.ToString(int.Parse(Console.ReadLine()), 2).PadLeft(11, '0');
+        for (int index = 0; index <= 10; index++) if (binary[index] == '0') Console.WriteLine("A{0}", index);
+    }
+}

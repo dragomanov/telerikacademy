@@ -1,0 +1,41 @@
+﻿using System;
+
+class Anacci
+{
+    public char NextElem(char F, char S)
+    {
+        return (char)((F + S - 129) % 26 + 65);
+    }
+
+    static void Main()
+    {
+        char A1 = char.Parse(Console.ReadLine());
+        char A2 = char.Parse(Console.ReadLine());
+        byte L = byte.Parse(Console.ReadLine());
+        char A3 = new Anacci().NextElem(A1, A2);
+        if (L == 1)
+        {
+            Console.WriteLine(A1); 
+        }
+        else if (L == 2)
+        {
+            Console.WriteLine("{0}\n{1}{2}", A1, A2, A3); 
+        }
+        else
+        {
+            Console.WriteLine("{0}\n{1}{2}", A1, A2, A3);
+            for (int i = 1; i <= L - 2; i++)
+            {
+                A1 = A2;
+                A2 = A3;
+                A3 = new Anacci().NextElem(A1, A2);
+                Console.Write(A3);
+                Console.Write(new String(' ', i));
+                A1 = A2;
+                A2 = A3;
+                A3 = new Anacci().NextElem(A1, A2);
+                Console.WriteLine(A3);
+            }
+        }
+    }
+}
