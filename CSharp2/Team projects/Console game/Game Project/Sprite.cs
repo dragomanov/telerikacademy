@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 class Sprite
 {
-    private string[] sprite;
+    public string[] sprite;
     public ConsoleColor color;
     public ConsoleColor backColor;
     public int height;
@@ -26,28 +26,47 @@ class Sprite
     // Draws the sprite image at the given sprite coordinates
     public void Draw(int col, int row)
     {
-        Console.ForegroundColor = color;
-        Console.BackgroundColor = backColor;
+        if (col < -width || col >= GameSource.winWidth)
+        {
+            destroyed = true;
+            return;
+        }
 
-        destroyed = true;
+        Console.ForegroundColor = color;
+        if (Console.BackgroundColor != backColor) Console.BackgroundColor = backColor;
+        string[] subSprite = (string[])sprite.Clone();
+
+        if (col < 0)
+        {
+            for (int curRow = 0; curRow < sprite.Length; curRow++)
+            {
+                subSprite[curRow] = Math.Abs(col) >= subSprite[curRow].Length ? "" : subSprite[curRow].Substring(Math.Abs(col));
+            }
+            col = 0;
+        }
+        else if (col + width >= GameSource.winWidth)
+        {
+            for (int curRow = 0; curRow < sprite.Length; curRow++)
+            {
+                 subSprite[curRow] = subSprite[curRow].Substring(0, Math.Min(GameSource.winWidth - col, subSprite[curRow].Length));
+            }
+        }
+
         for (int curRow = 0; curRow < height; curRow++)
         {
-            if ((curRow + row >= 0) && (curRow + row < GameSource.winHeight))
+            if ((curRow + row >= 0) && (curRow + row < GameSource.winHeight) && subSprite[curRow].Trim() != "")
             {
-                for (int curCol = 0; curCol < sprite[curRow].Length; curCol++)
+                for (int curCol = 0; curCol < subSprite[curRow].Length; curCol++)
                 {
-                    if ((curCol + col >= 0) && (curCol + col < GameSource.winWidth) && (sprite[curRow][curCol] != ' '))
+                    if ((curCol + col >= 0) && (curCol + col < GameSource.winWidth) && (subSprite[curRow][curCol] != ' '))
                     {
                         Console.SetCursorPosition(col + curCol, row + curRow);
-                        Console.Write(@sprite[curRow].Trim());
-                        destroyed = false;
+                        Console.Write(subSprite[curRow].Trim());
                         break;
                     }
                 }
             }
         }
-
-        Console.ResetColor();
     }
 
     // Erases the sprite image at the given sprite coordinates
@@ -64,7 +83,7 @@ class Sprite
                     if ((curCol + col >= 0) && (curCol + col < GameSource.winWidth) && (sprite[curRow][curCol] != ' '))
                     {
                         Console.SetCursorPosition(col + curCol, row + curRow);
-                        Console.Write(new string(' ', sprite[curRow].Trim().Length));
+                        Console.Write(new string(' ', Math.Min(sprite[curRow].Trim().Length, GameSource.winWidth - col - curCol)));
                         break;
                     }
                 }

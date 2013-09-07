@@ -17,7 +17,7 @@ class GameMenu
     static string[] menu;
     static int index = 0;
     public static string spritePath = "MenuSprite.txt";
-    static int spriteHeight = 6;
+    static int spriteHeight = 7;
     private static Sprite[] menuSprites = new Sprite[4];
 
     public GameMenuChoices MenuChoice()
@@ -30,22 +30,38 @@ class GameMenu
         {
             DrawMenu();
         }
-
-        return GameMenuChoices.NewGame;
+        if (GameMenu.index == 0)
+        {
+            return GameMenuChoices.NewGame;
+        }
+        if (GameMenu.index == 1)
+        {
+            return GameMenuChoices.ContinueGame;
+        }
+        if (GameMenu.index == 2)
+        {
+            return GameMenuChoices.Credits;
+        }
+        if (GameMenu.index == 3)
+        {
+            return GameMenuChoices.Quit;
+        }
+        return MenuChoice();
+        
     }
 
     static void Initialize()
     {
         menu = new string[] { "Start", "Options", "Credits", "Exit" };
         for (int i = 0; i < menu.Length; i++)
-		{
+        {
             string[] sprite = new string[spriteHeight];
             for (int j = 0; j < spriteHeight; j++)
-			{
+            {
                 sprite[j] = GameSource.sprites["MenuItems"][i * spriteHeight + j];
-			}
+            }
             menuSprites[i] = new Sprite(sprite, ConsoleColor.Red);
-		}
+        }
     }
 
     static bool GetKeyboardState()
@@ -75,7 +91,7 @@ class GameMenu
         }
         if (info.Key == ConsoleKey.Enter)
         {
-            enterMenu(index);
+            
             return true;
         }
 
@@ -90,41 +106,13 @@ class GameMenu
             if (i == index)
             {
                 menuSprites[i].color = ConsoleColor.Blue;
-                menuSprites[i].Draw(0, i * spriteHeight);
             }
             else
             {
                 menuSprites[i].color = ConsoleColor.White;
-                menuSprites[i].Draw(0, i * spriteHeight);
             }
+            menuSprites[i].Draw((GameSource.winWidth - menuSprites[i].width) / 2, i * spriteHeight + (GameSource.winHeight / 2) - spriteHeight * 2);
         }
         Console.BackgroundColor = ConsoleColor.Black;
-    }
-
-    static void enterMenu(int index)
-    {
-        switch (index)
-        {
-            case 0:
-                Console.WriteLine("started");
-
-                break;
-
-            case 1:
-
-                break;
-
-            case 2:
-
-                break;
-
-            case 3:
-
-                break;
-
-            default:
-
-                break;
-        }
     }
 }

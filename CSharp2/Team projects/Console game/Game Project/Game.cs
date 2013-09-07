@@ -33,7 +33,7 @@ class Game
         Console.Clear();
         player = new PlayerShip(0, (winHeight - sprites["PlayerShip"].Length) / 2);
         string[] enemySprite = sprites["EnemyShips"];
-        enemies.Add(new Enemy(winWidth - 1, rng.Next(winHeight - enemySprite.Length), enemySprite, new double[] { -0.9, 0 }));
+        enemies.Add(new Enemy(17, 25, enemySprite, new double[] { 0, 0 }));
         this.isRunning = true;
         drawThread.Start();
         while (isRunning || isPaused)
@@ -102,19 +102,12 @@ class Game
         Console.ReadKey(true);
     }
 
-    private void CollidePlayer<T>(List<T> objects)
-    {
-        foreach (var obj in new List<T>(objects))
-        {
-            objects.Remove(obj);
-        }
-    }
 
     // Updates all objects' states in the game
     private void Update()
     {
         player.Update();
-        CollidePlayer(enemies);
+        player.Collide(enemies);
 
         foreach (var enemy in new List<Enemy>(enemies))
         {
@@ -180,7 +173,7 @@ class Game
                 fps = 0;
                 start = DateTime.Now;
                 string[] enemySprite = sprites["EnemyShips"];
-                enemies.Add(new Enemy(winWidth - 1, rng.Next(winHeight - enemySprite.Length), enemySprite, new double[] { -(rng.Next(5, 20) / 10.0), 0 }));
+                //enemies.Add(new Enemy(winWidth - 1, rng.Next(winHeight - enemySprite.Length), enemySprite, new double[] { -(rng.Next(4, 12) / 10.0), 0 }));
             }
             Thread.Sleep(20);
         }

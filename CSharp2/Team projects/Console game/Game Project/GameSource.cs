@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 class GameSource
 {
-    public static readonly int winWidth = Console.LargestWindowWidth - 2;
-    public static readonly int winHeight = Console.LargestWindowHeight - 2;
+    public static readonly int winWidth = 120;
+    public static readonly int winHeight = 50;
     public static readonly Dictionary<string, string[]> sprites = new Dictionary<string,string[]>();
 
     static void Main()
@@ -45,11 +45,16 @@ class GameSource
             else if (choice == GameMenuChoices.Quit)
             {
                 // TODO: 
-                Console.WriteLine("Do you really want to quit the game?\n Y/N: ");
+                Console.Clear();
+                Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2);
+                Console.WriteLine("Do you really want to quit the game?");
+                Console.SetCursorPosition(Console.WindowWidth / 2, (Console.WindowHeight / 2)+1);
+                Console.Write("Y/N: ");
                 string choiceToQuit = Console.ReadLine();
                 if ((choiceToQuit == "Y" || choiceToQuit == "y"))
                 {
                     Environment.Exit(0);
+                    
                 }
                 else
                 {

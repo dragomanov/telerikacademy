@@ -52,6 +52,24 @@ class PlayerShip
     public void Shoot(List<Missile> missiles)
     {
         missiles.Add(new Missile(pos[0] + sprite.width, pos[1] + sprite.height / 2, new Sprite(new string[] { "*" }, ConsoleColor.DarkGreen)));
+        missiles[missiles.Count - 1].Draw();
+    }
+
+    public void Collide(List<Enemy> objects)
+    {
+        foreach (Enemy obj in new List<Enemy>(objects))
+        {
+            int startRow = Math.Max(pos[1], obj.pos[1]);
+            int endRow = Math.Min(pos[1] + sprite.height, obj.pos[1] + obj.sprite.height);
+            for (int curRow = startRow; curRow < endRow; curRow++)
+            {
+                if (sprite.sprite[endRow - curRow - 1].TrimEnd().Length + pos[1] >= obj.pos[1])
+                {
+                    obj.sprite.Erase(obj.pos[0], obj.pos[1]);
+                    objects.Remove(obj);
+                }
+            }
+        }
     }
 
     public void Update()
@@ -59,19 +77,19 @@ class PlayerShip
         updated = false;
         oldPos = (int[])pos.Clone();
 
-        if (direction == Direction.Up)
+        if (direction == Direction.Up && pos[1] > 0)
         {
             pos[1]--;
         }
-        else if (direction == Direction.Down)
+        else if (direction == Direction.Down && pos[1] < GameSource.winHeight - sprite.height)
         {
             pos[1]++;
         }
-        else if (direction == Direction.Left)
+        else if (direction == Direction.Left && pos[0] > 0)
         {
             pos[0]--;
         }
-        else if (direction == Direction.Right)
+        else if (direction == Direction.Right && pos[0] < GameSource.winWidth - sprite.width)
         {
             pos[0]++;
         }

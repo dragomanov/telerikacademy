@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 class Enemy
 {
-    private int[] pos = new int[2];
+    public int[] pos = new int[2];
     private int[] oldPos = new int[2];
     private double[] directionSpeed = new double[2] { 0, 0 };
     private double[] subPos = new double[2];
     public bool updated = false;
     public bool destroyed = false;
     public static string spritePath = "EnemyShipsSprite.txt";
-    private Sprite sprite;
+    public Sprite sprite;
 
     public Enemy(int col, int row, string[] sprite, double[] directionSpeed)
     {
