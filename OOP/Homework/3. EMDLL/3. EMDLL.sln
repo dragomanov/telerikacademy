@@ -5,6 +5,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. StringBuilderSubstring",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. IEnumerable Extenstions", "2. IEnumerable Extenstions\2. IEnumerable Extenstions.csproj", "{FE458DE1-CDFC-4E37-870B-78DE8EE71CF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-5. Students", "3-5. Students\3-5. Students.csproj", "{CD855664-C4DF-4677-A5FD-5D42AC579E4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. PrintDivisibleBy7And3", "6. PrintDivisibleBy7And3\6. PrintDivisibleBy7And3.csproj", "{6BF2E735-3064-4659-951C-B4FC0AEDEA1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. Timer", "7. Timer\7. Timer.csproj", "{33A5F976-5900-4786-8BDE-829BD4754F4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,6 +25,18 @@ Global
 		{FE458DE1-CDFC-4E37-870B-78DE8EE71CF2}.Debug|x86.Build.0 = Debug|x86
 		{FE458DE1-CDFC-4E37-870B-78DE8EE71CF2}.Release|x86.ActiveCfg = Release|x86
 		{FE458DE1-CDFC-4E37-870B-78DE8EE71CF2}.Release|x86.Build.0 = Release|x86
+		{CD855664-C4DF-4677-A5FD-5D42AC579E4F}.Debug|x86.ActiveCfg = Debug|x86
+		{CD855664-C4DF-4677-A5FD-5D42AC579E4F}.Debug|x86.Build.0 = Debug|x86
+		{CD855664-C4DF-4677-A5FD-5D42AC579E4F}.Release|x86.ActiveCfg = Release|x86
+		{CD855664-C4DF-4677-A5FD-5D42AC579E4F}.Release|x86.Build.0 = Release|x86
+		{6BF2E735-3064-4659-951C-B4FC0AEDEA1D}.Debug|x86.ActiveCfg = Debug|x86
+		{6BF2E735-3064-4659-951C-B4FC0AEDEA1D}.Debug|x86.Build.0 = Debug|x86
+		{6BF2E735-3064-4659-951C-B4FC0AEDEA1D}.Release|x86.ActiveCfg = Release|x86
+		{6BF2E735-3064-4659-951C-B4FC0AEDEA1D}.Release|x86.Build.0 = Release|x86
+		{33A5F976-5900-4786-8BDE-829BD4754F4F}.Debug|x86.ActiveCfg = Debug|x86
+		{33A5F976-5900-4786-8BDE-829BD4754F4F}.Debug|x86.Build.0 = Debug|x86
+		{33A5F976-5900-4786-8BDE-829BD4754F4F}.Release|x86.ActiveCfg = Release|x86
+		{33A5F976-5900-4786-8BDE-829BD4754F4F}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
