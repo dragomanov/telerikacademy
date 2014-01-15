@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Registration form</title>
+    <style>
+        span {
+            font-weight: bold;
+        }
+
+        #submit {
+            background-image: url(images/submit.jpg);
+            background-repeat: no-repeat;
+            background-position: left top;
+            width: 58px;
+            height: 37px;
+            border: 0px;
+            background-color: transparent;
+            cursor: pointer;
+            outline: 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="post">
+        <div>
+            <label for="name">Member name : </label>
+            <input type="text" id="name" value="" required />
+            <span>*req</span>
+        </div>
+        <div>
+            <label for="email">Email : </label>
+            <input type="email" id="email" value="" required />
+            <span>*req</span>
+        </div>
+        <div>
+            <label for="school">School : </label>
+            <input type="text" id="school" value="" required />
+            <span>*req</span>
+        </div>
+        <div>
+            <input type="submit" id="submit" value="" />
+        </div>
+    </form>
+</body>
+</html>
