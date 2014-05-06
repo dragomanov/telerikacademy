@@ -1,0 +1,121 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  width: 960px;
+  font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  margin: 5px;
+}
+.menu > li {
+  width: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.menu > li > a {
+  display: table-cell;
+  width: 170px;
+  height: 30px;
+  border-radius: 15px;
+  padding: 4px;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+  background: #B6FF00;
+}
+.menu > li .content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 170px;
+}
+.menu > li .content li {
+  background: #008000;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  width: 500px;
+}
+.menu > li .content li a {
+  height: 30px;
+  color: white;
+}
+.menu > li .content li a:hover {
+  text-decoration: underline;
+}
+.menu > li .content li a:hover ~ img {
+  display: block;
+}
+.menu > li .content img {
+  margin-top: 10px;
+  display: none;
+  width: 500px;
+  border-radius: 10px;
+}
+.menu > li:hover > a {
+  text-decoration: underline;
+}
+.menu > li:hover .content {
+  display: initial;
+}

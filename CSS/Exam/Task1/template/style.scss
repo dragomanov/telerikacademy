@@ -1,0 +1,90 @@
+@import "compass";
+@import "compass/reset";
+
+html, body {
+	font-family: Tahoma, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.clear {
+	clear: both;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 4px;
+
+    >header {
+        >#archive {
+            font-size: 10px;
+
+            ul {
+                text-align: right;
+                padding: 1px 0 2px;
+
+                li {
+                    margin: 0 5px 0 6px;
+                    display: inline;
+                }
+            }
+        }
+
+        #header {
+            position: relative;
+            color: white;
+            height: 64px;
+            background: url("images/topnav_divider.png");
+
+            #nav {
+                font-size: 18px;
+                padding: 22px 41px;
+                text-transform: capitalize;
+
+                ul {
+
+                    li {
+                    display: inline;
+                    margin: 0 9px;
+
+                        a {
+                            color: white;
+                        }
+                    }
+                }
+
+            }
+
+            h1 {
+                position: absolute;
+                top: 18px;
+                right: 15px;
+                font-size: 28px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    >#content {
+        >h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 19px 0 18px;
+        }
+
+        article {
+            text-align: justify;
+            line-height: 1.25em;
+            letter-spacing: 0.00365em;
+
+            p {
+                margin: 14px 0;
+            }
+        }
+    }
+}
