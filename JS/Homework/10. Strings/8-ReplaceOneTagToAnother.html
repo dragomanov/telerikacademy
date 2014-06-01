@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>JS Console - Example</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	
+</head>
+<body>
+	<div id="inputdiv">	
+		<div class="input">
+			<label for="tb-first">Insert text: </label>
+			<input type="text" id="tb-first"/>
+		</div>	
+		<div id="inputbutton">
+			<a href="#" onclick="onCountButtonClick()">Replace Tag</a>
+		</div>
+	</div>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>		  
+	<script>														 
+
+		function onCountButtonClick() {
+			var input = jsConsole.read("#tb-first");
+			if (input.length === 0) {
+                alert("Enter some text.");
+            }
+            else {
+                jsConsole.writeLine(replaceTags(input));
+            }
+		}
+		function fix(str) {
+            if (str) {
+                return str;
+            }
+            return "";
+        }
+
+        function replaceTags(input) {
+            // this matches the 'a href=' part
+            var aHref = /<\s*a\s[^>]*?\bhref\s*=\s*/;
+
+            // this matches the value of the href attribute, e.g. 'www.devbg.org'
+            var url = /(?:'([^']*)'|\"([^\"]*)\"|(\S*))[^>]*>/;
+
+            // the text between the opening and closing tag, e.g. 'our site'
+            var linkText = /([^<]*)<\s*\/a\s*>/;
+
+            var pattern = new RegExp(aHref.source + url.source + linkText.source, "gi");
+
+            var result = input.replace(pattern, function (match, url1, url2, url3, linkText) {
+                var url = fix(url1) + fix(url2) + fix(url3);
+                return "[URL=" + url + "]" + linkText + "[/URL]";
+            });
+
+            return result;
+        }
+	</script>			  
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>JS Console - Example</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	
+</head>
+<body>
+	<div id="inputdiv">	
+		<div id="inputbutton">
+			<a href="#" onclick="onCountButtonClick()">ChangeText</a>
+		</div>
+	</div>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>		  
+	<script>														 
+
+		function onCountButtonClick() {
+			var input = "<html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>";
+			jsConsole.writeLine("&lt;html&gt;&lt;head&gt;&lt;title&gt;Sample site&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div&gt;text&lt;div&gt;more text&lt;/div&gt;and more...&lt;/div&gt;in body&lt;/body&gt;&lt;/html&gt;");
+			var str = "";
+			var i;
+			var startIndex;
+			var endIndex;
+			for(i = 0; i < input.length; i++)
+			{
+				startIndex = input.indexOf("<", i);				
+				endIndex = input.indexOf(">", i+1);
+				str += input.substring(i,startIndex);
+				i = endIndex;
+			}
+			jsConsole.writeLine(str);
+		}											
+	</script>			  
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>JS Console - Example</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	
+</head>
+<body>
+	<div id="inputdiv">
+		<div class="input">
+			<label for="tb-first">Insert Text: </label>
+			<input type="text" id="tb-first"/>
+		</div>
+		<div id="inputbutton">
+			<a href="#" onclick="onCountButtonClick()">Count</a>
+		</div>
+	</div>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>		  
+	<script>														 
+
+		function onCountButtonClick() {
+			var input = jsConsole.read("#tb-first");
+			var str = "";
+			var i;
+			for(i = input.length - 1; i >= 0; i--)
+			{
+				str += input.substr(i,1);
+			}
+			jsConsole.writeLine("Reversed text is: " + str);
+		}											
+	</script>			  
+</body>
+</html>

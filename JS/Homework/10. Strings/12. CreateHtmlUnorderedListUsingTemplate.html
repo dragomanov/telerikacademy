@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>JS Console - Example</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	
+</head>
+<body onload="onBodyLoad()">
+    <div data-type="template" id="list-item" style="display: none">
+        <strong>-{name}-</strong> <span>-{age}-</span>
+    </div>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>		  
+	<script>														 
+
+		function onBodyLoad() {			
+            var people = [
+                { name: "Peter", age: 28 },
+                { name: "Ivan", age: 39 },
+                { name: "Georgi", age: 26 }
+            ];
+			
+			var template = document.getElementById("list-item").innerHTML;
+            template = template.trim();
+
+			var pattern = /-{(\w+)}-/g;
+
+            var UL = createUnorderedList(people, template, pattern);
+            jsConsole.writeLine(UL);
+        }
+
+        function createListItem(obj, template, pattern) {
+            var result = "<li>";
+
+            result += template.replace(pattern, function (match, capture) { return obj[capture]; });
+
+            result += "</li>";
+            return result;
+        }
+
+        function createUnorderedList(obj, template, pattern) {
+            var strArr = [];
+            strArr.push("<ul>");
+
+            for (var i = 0; i < obj.length; i++) {
+                var listItem = createListItem(obj[i], template, pattern);
+                strArr.push(listItem);
+            }
+
+            strArr.push("</ul>");
+
+            return strArr.join('');
+        }
+	</script>			  
+</body>
+</html>

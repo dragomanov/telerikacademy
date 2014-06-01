@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>JS Console - Example</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	
+</head>
+<body>
+	<div id="inputdiv">	
+		<div id="inputbutton">
+			<a href="#" onclick="onCountButtonClick()">Show result</a>
+		</div>
+	</div>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>		  
+	<script>														 
+
+		function onCountButtonClick() {
+			//var input = jsConsole.read("#tb-first");
+			var input = 'stringFormat("{0}, {1}, {0} text {2}",1,"Pesho","Gosho");';
+			jsConsole.writeLine(input);
+			var output = stringFormat("{0}, {1}, {0} text {2}",1,"Pesho","Gosho");
+
+			jsConsole.writeLine(output);
+		}
+		stringFormat = function(){
+			var i;
+			var result = arguments[0];
+			for (i = 0; i< arguments.length - 1; i++)
+			{
+				var pattern = "\\{" + i + "\\}";
+                var reg = new RegExp(pattern, "g");
+                result = result.replace(reg, arguments[i + 1]);
+			}
+			return result;
+		}
+	</script>			  
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>JS Console - Example</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	
+</head>
+<body>
+	<div id="inputdiv">	
+		<div class="input">
+			<label for="tb-first">Insert URL: </label>
+			<input type="text" id="tb-first"/>
+		</div>	
+		<div id="inputbutton">
+			<a href="#" onclick="onCountButtonClick()">Parse URL</a>
+		</div>
+	</div>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>		  
+	<script>														 
+
+		function onCountButtonClick() {
+			var input = jsConsole.read("#tb-first");
+			jsConsole.writeLine(input);
+			var jasonObj;
+			var i = 0;
+			var protocol;
+			var server;
+			var resource;
+			var index;
+			
+			index = input.indexOf("://", i);
+			if(index != -1)
+			{
+				protocol = input.substring(i, index);
+				i += index + 3;
+			}
+			index = input.indexOf("/", i);
+			if(index != -1)
+			{
+				server = input.substring(i, index);
+				i += index;
+			}
+			resource = input.substring(index);
+			
+			jasonObj = generateJson(protocol, server, resource);
+			jsConsole.writeLine(jasonObj);
+		}
+		function generateJson(protocol, server, resource){
+			return {
+				protocol: protocol,
+				server: server,
+				resource: resource,
+				toString: function (){
+					return '{protocol: "' + protocol + '",<br/>server: "' + server + '",<br/>resource: "' + resource + '"}';
+				}
+			}
+		}
+	</script>			  
+</body>
+</html>
