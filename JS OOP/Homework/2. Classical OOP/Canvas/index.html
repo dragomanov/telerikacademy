@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Canvas module</title>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <div id="cvs"></div>
+    <script src="canvas.js"></script>
+    <script>
+        var canvas1 = new CanvasModule.Canvas('#canvas-container', 200, 200),
+            canvas2 = new CanvasModule.Canvas('#cvs', 100, 100),
+            rectangle = new CanvasModule.Rectangle(50, 50, 40, 20, {
+                fill: 'blue',
+                stroke: 'yellowgreen',
+                strokeSize: 5
+            }),
+            circle = new CanvasModule.Circle(100, 100, 50, {
+                fill: 'yellow',
+                stroke: 'orange',
+                strokeSize: 3
+            }),
+            line = new CanvasModule.Line(50, 50, 90, 70, {
+                stroke: 'red',
+                strokeSize: 1
+            });
+        canvas1.draw(circle);
+        canvas2.draw(rectangle);
+        canvas2.draw(line);
+    </script>
+</body>
+</html>
