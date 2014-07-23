@@ -3,12 +3,20 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/scripts/app.js" />
+        <item url="file://$PROJECT_DIR$/scripts/bulls-and-cows-ui.js" />
+        <item url="file://$PROJECT_DIR$/scripts/storage.js" />
         <item url="file://$PROJECT_DIR$/scripts/config.js" />
+        <item url="file://$PROJECT_DIR$/scripts/rng.js" />
+        <item url="file://$PROJECT_DIR$/scripts/bulls-and-cows.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/scripts/app.js" />
+      <root url="file://$PROJECT_DIR$/scripts/bulls-and-cows-ui.js" />
       <root url="file://$PROJECT_DIR$/scripts/config.js" />
+      <root url="file://$PROJECT_DIR$/scripts/storage.js" />
+      <root url="file://$PROJECT_DIR$/scripts/bulls-and-cows.js" />
+      <root url="file://$PROJECT_DIR$/scripts/rng.js" />
     </CLASSES>
     <SOURCES />
   </library>
