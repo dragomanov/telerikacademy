@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/scripts/student-manager/student-model.js" />
+        <item url="file://$PROJECT_DIR$/scripts/student-manager/student-controller.js" />
+        <item url="file://$PROJECT_DIR$/server/routes/students.js" />
+        <item url="file://$PROJECT_DIR$/scripts/student-manager/app.js" />
+        <item url="file://$PROJECT_DIR$/scripts/http-requester/app.js" />
+        <item url="file://$PROJECT_DIR$/scripts/http-requester/httpRequester.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/scripts/student-manager/student-model.js" />
+      <root url="file://$PROJECT_DIR$/scripts/student-manager/student-controller.js" />
+      <root url="file://$PROJECT_DIR$/scripts/http-requester/app.js" />
+      <root url="file://$PROJECT_DIR$/scripts/student-manager/app.js" />
+      <root url="file://$PROJECT_DIR$/server/routes/students.js" />
+      <root url="file://$PROJECT_DIR$/scripts/http-requester/httpRequester.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

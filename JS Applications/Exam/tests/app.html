@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unit testing for YACSC</title>	
+  <link rel="stylesheet" href="mocha.css">
+</head>
+<body>
+  <div id="mocha"></div>
+  <script src="mocha.js"></script>
+  <script src="chai.js"></script>
+  <script type="text/javascript">
+    mocha.setup('bdd');
+    expect = chai.expect;
+  </script>
+  <script src="../app/scripts/app.js"></script>
+  <script src="app.tests.js"></script>
+  <script type="text/javascript">
+    mocha.run();
+  </script>
+</body>
+</html>

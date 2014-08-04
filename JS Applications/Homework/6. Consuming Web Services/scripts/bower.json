@@ -1,0 +1,25 @@
+{
+  "name": "app",
+  "version": "1",
+  "homepage": "https://github.com/dragomanov/telerikacademy",
+  "authors": [
+    "dragomanov <adragomanov@gmail.com>"
+  ],
+  "main": "app",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "underscore": "~1.6.0",
+    "q": "~2.0.0",
+    "requirejs": "~2.1.14",
+    "sammy": "~0.7.5"
+  }
+}
