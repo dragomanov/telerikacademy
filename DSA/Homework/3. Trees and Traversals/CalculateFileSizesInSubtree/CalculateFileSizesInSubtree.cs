@@ -7,70 +7,56 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Threading;
 
 namespace TreesAndTraversals
 {
-    class CalculateFileSizesInSubtree
+    public class CalculateFileSizesInSubtree
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            //ThreadStart threadDelegate = new ThreadStart(GetAllFilesDelegate);
-            //Thread newThread = new Thread(threadDelegate, 10000000);
-            //newThread.Start();
+            const string RootDirectory = "C:\\windows";
+            const string FilePattern = "*.*";
 
+            Folder root = new Folder(RootDirectory);
+            CreateFolders(root, FilePattern);
 
+            Console.WriteLine("Folder: " + root.Name);
+            Console.WriteLine("Size in bytes: " + root.GetFilesSize());
         }
 
-        public static void GetAllFilesDelegate()
+        private static void CreateFolders(Folder root, string filePattern)
         {
-            GetAllFilesInDirectory(@"C:\WINDOWS", "*.exe");
-        }
-
-        public static List<string> GetAllFilesInDirectory(string directory, string pattern)
-        {
-            List<string> files = new List<string>();
-            Queue<string> directories = new Queue<string>();
-            directories.Enqueue(directory);
-
-            GetAllFilesInDirectoryRecursively(directories, files, pattern);
-
-            return files;
-        }
-
-        private static void GetAllFilesInDirectoryRecursively(Queue<string> directories, List<string> files, string pattern)
-        {
-            string directory = directories.Dequeue();
-            IEnumerable<string> filesInDir;
-
             try
             {
-                filesInDir = Directory.GetFiles(directory, pattern);
-                files.AddRange(filesInDir);
-                foreach (var dir in Directory.GetDirectories(directory))
+                string[] files = Directory.GetFiles(root.Name, filePattern);
+                string[] folders = Directory.GetDirectories(root.Name);
+                if (files.Length == 0 && folders.Length == 0)
                 {
-                    directories.Enqueue(dir);
+                    return;
+                }
+                else
+                {
+                    FileInfo fileInfo;
+                    long size;
+                    foreach (var fileName in files)
+                    {
+                        fileInfo = new FileInfo(fileName);
+                        size = fileInfo.Length;
+                        root.AddFile(fileName, size);
+                    }
+
+                    foreach (var folderName in folders)
+                    {
+                        root.AddFolder(folderName);
+                        CreateFolders(root.ChildFolders[root.ChildFolders.Count - 1], filePattern);
+                    }
                 }
             }
             catch (UnauthorizedAccessException)
             {
-                filesInDir = new string[0];
-            }
-
-            if (filesInDir.Count() > 0)
-            {
-                Console.WriteLine(String.Join("\n", filesInDir));
-            }
-
-            if (directories.Count == 0)
-            {
-                return;
-            }
-            else
-            {
-                GetAllFilesInDirectoryRecursively(directories, files, pattern);
             }
         }
     }

@@ -1,21 +1,21 @@
 ﻿namespace TreesAndTraversals
 {
-    class File
+    public class File
     {
         string name;
-        int size;
+        long size;
 
         public string Name
         {
             get { return this.name; }
         }
 
-        public int Size
+        public long Size
         {
             get { return this.size; }
         }
 
-        public File(string name, int size)
+        public File(string name, long size)
         {
             this.name = name;
             this.size = size;
