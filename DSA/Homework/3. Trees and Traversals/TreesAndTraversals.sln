@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "Tree\Tree.csproj", "{6BD8B10B-1BBB-43CB-829C-4D0BE7597BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindExesInWindows", "FindExesInWindows\FindExesInWindows.csproj", "{6FE30954-5729-4666-B0E9-FA580DE7E4B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateFileSizesInSubtree", "CalculateFileSizesInSubtree\CalculateFileSizesInSubtree.csproj", "{3B78EFFD-6BAB-4EBF-B2E3-8DE2EBDA2A04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BD8B10B-1BBB-43CB-829C-4D0BE7597BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BD8B10B-1BBB-43CB-829C-4D0BE7597BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BD8B10B-1BBB-43CB-829C-4D0BE7597BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BD8B10B-1BBB-43CB-829C-4D0BE7597BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE30954-5729-4666-B0E9-FA580DE7E4B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE30954-5729-4666-B0E9-FA580DE7E4B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE30954-5729-4666-B0E9-FA580DE7E4B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE30954-5729-4666-B0E9-FA580DE7E4B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B78EFFD-6BAB-4EBF-B2E3-8DE2EBDA2A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B78EFFD-6BAB-4EBF-B2E3-8DE2EBDA2A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B78EFFD-6BAB-4EBF-B2E3-8DE2EBDA2A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B78EFFD-6BAB-4EBF-B2E3-8DE2EBDA2A04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

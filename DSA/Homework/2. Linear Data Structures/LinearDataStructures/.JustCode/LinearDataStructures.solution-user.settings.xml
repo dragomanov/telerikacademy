@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0" Timestamp="b9efd724-c6b4-414a-a98f-6cff5b789a82">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings Version="2">
+      <FilePath>
+        <FileRelativePath>1.%20Sum%20and%20Average%20of%20Sequence/SumAndAverageOfSequence.cs</FileRelativePath>
+        <ProjectRelativePath>1.%20Sum%20and%20Average%20of%20Sequence/SumAndAverageOfSequence.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>5041660310119890227</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>
