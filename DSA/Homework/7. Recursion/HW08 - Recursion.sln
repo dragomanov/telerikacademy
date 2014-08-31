@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SimulateNestedLoops", "01.SimulateNestedLoops\01.SimulateNestedLoops.csproj", "{FD03C4A7-BDA5-4EE0-8A82-2CF829B4D0B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.CombinationsWithDuplicates", "02.CombinationsWithDuplicates\02.CombinationsWithDuplicates.csproj", "{C51C000C-D2D6-4A50-B7E1-C34A443633B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.CombinationsWithoutDuplicates", "03.CombinationsWithoutDuplicates\03.CombinationsWithoutDuplicates.csproj", "{CA27F297-0377-4E3E-AFF1-449B3601516B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.VariationsFromSet", "05.VariationsFromSubset\05.VariationsFromSet.csproj", "{316B7554-7B2E-4C1B-B5C6-AF1E2A842955}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Permutations", "04.GeneratePermutations\04.Permutations.csproj", "{A4BB5682-561F-4E44-9F70-4E406CB1A30D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.CombinationsFromSet", "06.CombinationsFromSet\06.CombinationsFromSet.csproj", "{3CB5F394-4D5A-40B2-995F-6E1A555294FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.LabyrinthAllPaths", "07.LabyrinthAllPaths\07.LabyrinthAllPaths.csproj", "{2116A6E0-6C66-4F06-9A02-F7E350FC037E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.LabyrinthFirstFoundPath", "08.LabyrinthFirstFoundPath\08.LabyrinthFirstFoundPath.csproj", "{96A683DB-7A96-4FAC-9C7C-1E13445B0525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.LabyrinthLargestEmptyArea", "09.LabyrinthLargestEmptyArea\09.LabyrinthLargestEmptyArea.csproj", "{B53D1B0F-F924-40AD-AA72-17621F63D82B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.LabyrinthAllPassableAreas", "10.LabyrinthAllPassableAreas\10.LabyrinthAllPassableAreas.csproj", "{F13A0866-7515-429B-92D3-6CD19F209C9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.PermutationsWithRep", "11.PermutationsWithRep\11.PermutationsWithRep.csproj", "{B5EB1BF2-A385-4F9C-84A0-681993240CBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD03C4A7-BDA5-4EE0-8A82-2CF829B4D0B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD03C4A7-BDA5-4EE0-8A82-2CF829B4D0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD03C4A7-BDA5-4EE0-8A82-2CF829B4D0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD03C4A7-BDA5-4EE0-8A82-2CF829B4D0B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C51C000C-D2D6-4A50-B7E1-C34A443633B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C51C000C-D2D6-4A50-B7E1-C34A443633B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C51C000C-D2D6-4A50-B7E1-C34A443633B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C51C000C-D2D6-4A50-B7E1-C34A443633B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA27F297-0377-4E3E-AFF1-449B3601516B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA27F297-0377-4E3E-AFF1-449B3601516B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA27F297-0377-4E3E-AFF1-449B3601516B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA27F297-0377-4E3E-AFF1-449B3601516B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316B7554-7B2E-4C1B-B5C6-AF1E2A842955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316B7554-7B2E-4C1B-B5C6-AF1E2A842955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316B7554-7B2E-4C1B-B5C6-AF1E2A842955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316B7554-7B2E-4C1B-B5C6-AF1E2A842955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4BB5682-561F-4E44-9F70-4E406CB1A30D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4BB5682-561F-4E44-9F70-4E406CB1A30D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4BB5682-561F-4E44-9F70-4E406CB1A30D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4BB5682-561F-4E44-9F70-4E406CB1A30D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB5F394-4D5A-40B2-995F-6E1A555294FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB5F394-4D5A-40B2-995F-6E1A555294FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB5F394-4D5A-40B2-995F-6E1A555294FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB5F394-4D5A-40B2-995F-6E1A555294FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2116A6E0-6C66-4F06-9A02-F7E350FC037E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2116A6E0-6C66-4F06-9A02-F7E350FC037E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2116A6E0-6C66-4F06-9A02-F7E350FC037E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2116A6E0-6C66-4F06-9A02-F7E350FC037E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96A683DB-7A96-4FAC-9C7C-1E13445B0525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A683DB-7A96-4FAC-9C7C-1E13445B0525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A683DB-7A96-4FAC-9C7C-1E13445B0525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A683DB-7A96-4FAC-9C7C-1E13445B0525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B53D1B0F-F924-40AD-AA72-17621F63D82B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B53D1B0F-F924-40AD-AA72-17621F63D82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B53D1B0F-F924-40AD-AA72-17621F63D82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B53D1B0F-F924-40AD-AA72-17621F63D82B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F13A0866-7515-429B-92D3-6CD19F209C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F13A0866-7515-429B-92D3-6CD19F209C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F13A0866-7515-429B-92D3-6CD19F209C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F13A0866-7515-429B-92D3-6CD19F209C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5EB1BF2-A385-4F9C-84A0-681993240CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5EB1BF2-A385-4F9C-84A0-681993240CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5EB1BF2-A385-4F9C-84A0-681993240CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5EB1BF2-A385-4F9C-84A0-681993240CBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
