@@ -1,0 +1,27 @@
+﻿<Window x:Class="MongoChat.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MongoChat - Login"
+        Height="150"
+        Width="250"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="#FF8AE0EE" Offset="0.981"/>
+        </RadialGradientBrush>
+    </Window.Background>
+
+    <Grid Height="121" VerticalAlignment="Top">
+        <TextBox Margin="25,25,25,0"
+                 Name="UserNameTextBox"
+                 Focusable="true"
+                 TextWrapping="Wrap"
+                 Padding="6"
+                 MaxLength="15" Opacity="0.7" Height="32" VerticalAlignment="Top" />
+        <Button Content="Login"
+                Margin="25,0,25,25"
+                IsDefault="True" Click="ButtonClick" Height="26" VerticalAlignment="Bottom" />
+    </Grid>
+</Window>

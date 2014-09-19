@@ -1,0 +1,5 @@
+Employee: Id, FirstName, LastName (5, 20), YearSalary, ManagerId (NULL), DepartmentId 
+EmpoloyeesProjects: EmployeeId, ProcjectId, StartDate, EndDate
+Reports: Id, Employee, Time
+Project: Id, Name (5, 50)
+Department: Id, Name (UNQ 10, 50)

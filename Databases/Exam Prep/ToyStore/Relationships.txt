@@ -1,0 +1,6 @@
+Countries - Manufacturers: One-Many
+Manufacturers - Toys: One-Many
+ToyTypes - Toys: One-Many
+AgeRanges - Toys: One-Many
+Colors - Toys: One-Many
+Categories - Toys: Many-Many

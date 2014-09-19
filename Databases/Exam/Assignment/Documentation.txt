@@ -1,0 +1,12 @@
+Connection string for "Company" database: "data source=.;initial catalog=Company;integrated security=True"
+Connection string for "Cars" database: "data source=.;initial catalog=Cars;integrated security=True"
+Relationships for "Company" database: (first-table : second-table - type of relationship)
+	Departments : Employees - One-Many
+	Employees : Employees - One-Many
+	Employees : Reports - One-Many
+	Employees : Projects - Many-Many
+Relationships for "Cars" database: (first-table : second-table - type of relationship)
+	Manufacturers : Cars - One-Many
+	Dealers : Cars - One-Many
+	Cities : Dealers - Many-Many
+Query files: Company.RandomDataGenerator\Queries\
